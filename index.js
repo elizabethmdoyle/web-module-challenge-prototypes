@@ -22,17 +22,19 @@ function Person(name, age) {
 
 }
 
-Person.prototype.eat = function() {
-  return
+Person.prototype.eat = function(edible) {
+  if(this.stomach.length <= 10){
+    this.stomach.push(edible)
+  }
 }
 
 Person.prototype.poop = function() {
-  return
+    this.stomach = [];
 }
 
 Person.prototype.toString = function() {
-  return
-}
+  return `${this.name}, ${this.age}`
+ }
 
 
 
