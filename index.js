@@ -109,10 +109,10 @@ Baby.prototype.play = function() {
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Window binding: the value of this is obtainable within global scope, or inside of the entire document Window
+  2. Implicit binding: based on how it is invoked. Any object listed when invoked to the left of the dot, is the object that is bound 'implicitly'
+  3. New Binding: using the constructor function, adding instances of an objectt that were created in the cunstroctor function using the new keyword
+  4. Explicit Binding: when using .call or .apply, this is considered to be explicitly called.
 */
 
 ///////// END OF CHALLENGE /////////
