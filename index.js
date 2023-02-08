@@ -38,8 +38,11 @@ Person.prototype.toString = function() {
 
  const mary = new Person('Mary', 50)
 
- console.log(mary.toString())
-
+//  console.log(mary.toString())
+//  mary.eat('pizza');
+//  console.log(mary.stomach);
+//  mary.poop();
+//  console.log(mary.stomach)
 
 /*
   TASK 2
@@ -82,7 +85,10 @@ Car.prototype.drive = function(distance) {
         + Should return a string "Playing with x", x being the favorite toy.
 */
 
-function Baby() {
+function Baby(name, age, favoriteToy) {
+  this.name = name;
+  this.age = age;
+  this.favoriteToy = favoriteToy;
 
 }
 
