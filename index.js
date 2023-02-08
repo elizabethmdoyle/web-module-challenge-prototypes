@@ -36,8 +36,9 @@ Person.prototype.toString = function() {
   return `${this.name}, ${this.age}`
  }
 
+ const mary = new Person('Mary', 50)
 
-
+ console.log(mary.toString())
 
 
 /*
@@ -56,8 +57,14 @@ Person.prototype.toString = function() {
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
+function Car(model, milesPerGallon) {
+  let tank = 0;
+  let odometer = 0;
 
+}
+
+Car.prototype.fill = function() {
+   
 }
 
 
