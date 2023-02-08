@@ -69,11 +69,19 @@ function Car(model, milesPerGallon) {
 }
 
 Car.prototype.fill = function(gallons) {
- 
+ this.tank = this.tank + gallons;
 }
 
 Car.prototype.drive = function(distance) {
-   
+   const drivableMiles = this.tank * this.milesPerGallon;
+  if(distance <= drivableMiles) {
+    this.odometer = this.odometer + distance;
+    this.tank = this.tank = (distance / this.milesPerGallon)
+  } else {
+    this.odometer = this.odometer + drivableMiles
+    this.tank = 0;
+    return `I ran out of fuel at ${this.odometer} miles`
+  }
 }
 
 
@@ -86,10 +94,13 @@ Car.prototype.drive = function(distance) {
 */
 
 function Baby(name, age, favoriteToy) {
-  this.name = name;
-  this.age = age;
+ Person.call(this, name, age)
   this.favoriteToy = favoriteToy;
 
+}
+
+Baby.prototype.play = function() {
+  return `Playing with ${this.favoriteToy}`
 }
 
 
