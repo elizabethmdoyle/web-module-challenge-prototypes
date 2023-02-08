@@ -63,8 +63,8 @@ Person.prototype.toString = function() {
 function Car(model, milesPerGallon) {
   this.model = model;
   this.milesPerGallon = milesPerGallon;
-  let tank = 0;
-  let odometer = 0;
+  this.tank = 0;
+  this.odometer = 0;
 
 }
 
@@ -98,6 +98,8 @@ function Baby(name, age, favoriteToy) {
   this.favoriteToy = favoriteToy;
 
 }
+
+Baby.prototype = Object.create(Person.prototype)
 
 Baby.prototype.play = function() {
   return `Playing with ${this.favoriteToy}`
